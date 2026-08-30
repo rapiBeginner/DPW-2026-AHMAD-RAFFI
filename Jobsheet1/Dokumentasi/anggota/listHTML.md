@@ -4,7 +4,7 @@
 | Nama | Ahmad Raffi |
 | Kelas | TI - 2F |
 
-# Penjelasan buku/list.html
+# Penjelasan anggota/list.html
   1. Disini kita belajar untuk membuat tabel, dengan menggunakan beberapa tag berikut dan fungsinya
 
         | Tag | Kegunaan |
