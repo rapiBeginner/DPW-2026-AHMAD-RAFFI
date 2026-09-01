@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LibSym-Mini</title>
+    <link rel="stylesheet" href="../asset/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Mini Library System </h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li><a href="list.html">Books List</a></li>
+                <li><a href="tambah.html">Add Book</a></li>
+                <li> <a href="../anggota/list.html">Member List</a></li>
+                <li><a href="../anggota/tambah.html">Add new Member</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Add Book</h2>
+            <form>
+                <p>
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title" required>
+                </p>
+                <p>
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author" required>
+                </p>
+                <p>
+                    <label for="years">Publish year</label>
+                    <input type="number" id="years" name="years" min="1900" max="2026" required>
+                </p>
+                <p>
+                    <label for="publisher">Publisher</label>
+                    <input type="text" name="publisher" id="publisher" required>
+                </p>
+                <p>
+                    <label for="isbm">ISBM</label>
+                    <input type="text" name="isbm" id="isbm">
+                </p>
+                <p>
+                    <label for="stock">Stock</label>
+                    <input type="text" name="stock" min="0" id="stock" required>
+                </p>
+                <p>
+                    <label for="category">Category</label>
+                    <select name="category" id="category">
+                        <option value="fiction">Fiction</option>
+                        <option value="non-fiction">Non-Fiction</option>
+                        <option value="reference">Reference</option>
+                    </select>
+                </p>
+                <p>
+                    <button type="submit">Save</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2026 SIMPUS-Mini &mdash; Jobsheet 1
+        </p>
+    </footer>
+</body>
+
+</html>
