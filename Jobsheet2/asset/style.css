@@ -44,7 +44,7 @@ header nav ul{
 header nav a{
     color: #fff;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
     display: inline-block;
 
 }
@@ -98,7 +98,7 @@ main section:nth-of-type(2) article{
 }
 
 main section:nth-of-type(2) article:hover{
-    transition: all 0.2s ease;
+    transition: all 0.2s ease-in-out;
     transform: scale(0.95);
 }
 
@@ -147,6 +147,12 @@ td button {
     border-radius:5px;
     cursor: pointer;
     font-size: 0.85rem;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+td button:hover{
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
 }
 
 td button:first-of-type{
@@ -154,9 +160,16 @@ td button:first-of-type{
     color: #fff;
 }
 
+td button:first-of-type:hover{
+    background-color: #c28b3e;
+}
+
 td button:last-of-type{
     background-color: #d9534f;
     color: #fff;
+}
+td button:last-of-type:hover{
+    background-color: #a33e3b;
 }
 
 th, td{
@@ -178,18 +191,19 @@ form label{
 }
 
 form input, form select{
-    width: 0%;
+    width: 100%;
     /* max-width: 400px; */
     padding: 0.55rem 0.7rem;
     border: 1px solid #cdd4da;
     border-radius: 4px;
     font-size: 1rem;
+    margin: 0 auto;
 }
 
 form input:focus{
     border: 2px solid #7423bb;
     outline: none;
-    transition:all 0.3s ease;
+    transition:all 0.1s ease-in-out;
     transform: scaleY(1.1);
     /* background-color: #1d5b8a; */
 }
@@ -216,7 +230,7 @@ select:hover{
 
 form button:hover{
     background-color: #5b1a93;
-    transition: all 0.4s ease;
+    transition: all 0.4s ease-in-out;
     transform: scale(0.9);
 }
 
