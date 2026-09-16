@@ -311,7 +311,7 @@ footer {
         display: block;
     } */
 
-    header nav.nav-open{
+    .nav-open{
         display: block;
         animation: slideToBottom 1s ease;
     }
