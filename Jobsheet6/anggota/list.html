@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LibSym-Mini</title>
+    <link rel="stylesheet" href="../asset/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Mini Library System</h1>
+        <!-- <input type="checkbox" name="" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label> -->
+        <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../buku/list.html">Book List</a></li>
+                <li><a href="../buku/tambah.html">Add Book</a></li>
+                <li><a href="list.html">Member List</a></li>
+                <li><a href="tambah.html">Add Member</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Member List</h2>
+            <div class="search-box">
+                <label for="search-input">Cari Nama Anggota</label>
+                <input type="text" name="" id="search-input" placeholder="Ketik nama anggota...">
+            </div>
+            <p id="loading-indicator" style="display: none;">Memuat data...</p>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Member ID</th>
+                            <th>Name</th>
+                            <th>Adresse</th>
+                            <th>Phone number</th>
+                            <th>Date of joining</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 1</p>
+    </footer>
+    <script src="../asset/app.js"></script>
+    <script src="/asset/anggota.js"></script>
+</body>
+
+</html>
