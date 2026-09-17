@@ -23,6 +23,7 @@ async function muatDaftarAnggota() {
                 "<td>" + anggota.nama + "</td>" +
                 "<td>" + anggota.alamat + "</td>" +
                 "<td>" + anggota.no_hp + "</td>" +
+                "<td>" + anggota.tanggal_bergabung + "</td>" +
                 "<td>" +
                 "<button type=\"button\">Edit</button> " +
                 "<button type=\"button\" class=\"btn-hapus\">Hapus</button>" +
