@@ -6,7 +6,7 @@ $flash = $_SESSION['flash'] ?? null;
 unset($_SESSION['flash']);
 ?>
         <section>
-            <h2>Add book</h2>
+            <h2>Add Book</h2>
 
             <?php if ($flash): ?>
                 <p class="flash flash-<?php echo $flash['type']; ?>"><?php echo $flash['pesan']; ?></p>
@@ -22,7 +22,7 @@ unset($_SESSION['flash']);
                     <input type="text" id="pengarang" name="pengarang" required>
                 </p>
                 <p>
-                    <label for="tahun">Date of release</label>
+                    <label for="tahun">Years of release</label>
                     <input type="number" id="tahun" name="tahun" min="1900" max="2026" required>
                 </p>
                 <p>

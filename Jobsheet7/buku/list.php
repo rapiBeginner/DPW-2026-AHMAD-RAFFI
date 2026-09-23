@@ -8,11 +8,9 @@ $daftarBuku = $_SESSION['buku'] ?? [];
 ?>
 <section>
     <h2>Books List</h2>
-
     <?php if ($flash): ?>
         <p class="flash flash-<?php echo $flash['type']; ?>"><?php echo $flash['pesan']; ?></p>
     <?php endif; ?>
-
     <div class="search-box">
         <label for="search-input">Cari Judul Buku</label>
         <input type="text" name="" id="search-input" placeholder="Ketik judul buku...">
@@ -28,13 +26,12 @@ $daftarBuku = $_SESSION['buku'] ?? [];
                     <th>Stock</th>
                     <th>Kategori</th>
                     <th>Action</th>
-
                 </tr>
             </thead>
             <tbody>
                 <?php if (empty($daftarBuku)): ?>
                     <tr>
-                        <td colspan="6">Belum ada data buku. Silakan tambah lewat menu "Tambah Buku".</td>
+                        <td colspan="6" style="text-align: center;">Belum ada data buku. Silakan tambah lewat menu "Tambah Buku".</td>
                     </tr>
                 <?php else: ?>
                     <?php foreach ($daftarBuku as $buku): ?>
@@ -54,5 +51,10 @@ $daftarBuku = $_SESSION['buku'] ?? [];
             </tbody>
         </table>
     </div>
+    <form action="../reset.php" method="post">
+        <input type="hidden" name="reset" value="true">
+        <input type="hidden" name="file" value="<?php echo $_SERVER['PHP_SELF'] ?>">
+        <button type="submit" style="margin-top: 1rem;">Reset</button>
+    </form>
 </section>
-<?php include __DIR__ . '/../includes/footer.php'; ?>
+<?php include __DIR__.'/../includes/footer.php';?>

@@ -8,24 +8,36 @@ $isbn = trim($_POST['isbn'] ?? '');
 $stok = $_POST['stok'] ?? '';
 $kategori = trim($_POST['kategori'] ?? '');
 
-// Validasi server-side — wajib ada meski sudah divalidasi JS di Jobsheet 5,
-// karena validasi client bisa dilewati (nonaktifkan JS / kirim request manual).
 $errors = [];
+
 if ($judul === '') {
-    $errors[] = "Judul wajib diisi.";
+    $errors[] = "Title is required.";
 }
+
 if ($pengarang === '') {
-    $errors[] = "Pengarang wajib diisi.";
+    $errors[] = "Author is required.";
 }
+
 if (!is_numeric($tahun) || $tahun < 1900 || $tahun > 2026) {
-    $errors[] = "Tahun harus di antara 1900-2026.";
+    $errors[] = "Year must be between 1900 and 2026.";
 }
+
 if (!is_numeric($stok) || $stok < 0) {
-    $errors[] = "Stok tidak boleh negatif.";
+    $errors[] = "Stock cannot be negative.";
+}
+
+if (empty($isbn)) {
+    $errors[] = "ISBN cannot be empty.";
+} else if (!preg_match('/^[0-9-]+$/', $isbn)) {
+    $errors[] = "ISBN can only contain numbers and -.";
 }
 
 if (!empty($errors)) {
-    $_SESSION['flash'] = ['type' => 'error', 'pesan' => implode(' ', $errors)];
+    $_SESSION['flash'] = [
+        'type' => 'error',
+        'pesan' => implode(' ', $errors)
+    ];
+
     header('Location: tambah.php');
     exit;
 }
@@ -43,6 +55,10 @@ $_SESSION['buku'][] = [
     'kategori' => $kategori,
 ];
 
-$_SESSION['flash'] = ['type' => 'success', 'pesan' => 'Buku berhasil ditambahkan.'];
+$_SESSION['flash'] = [
+    'type' => 'success',
+    'pesan' => 'Book successfully added.'
+];
+
 header('Location: list.php');
 exit;

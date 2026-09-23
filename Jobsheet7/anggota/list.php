@@ -54,5 +54,11 @@ $daftarAnggota = $_SESSION['anggota'] ?? [];
             </tbody>
         </table>
     </div>
+
+    <form action="../reset.php" method="post">
+        <input type="hidden" name="reset" value="true">
+        <input type="hidden" name="file" value="<?php echo $_SERVER['PHP_SELF']?>">
+        <button type="submit">Reset</button>
+    </form>
 </section>
 <?php include __DIR__ . '/../includes/footer.php' ?>

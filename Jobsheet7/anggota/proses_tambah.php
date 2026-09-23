@@ -2,6 +2,7 @@
 session_start();
 $nama = trim($_POST['name'] ?? '');
 $noAnggota = trim($_POST['memberID']);
+var_dump((int)$noAnggota<0);
 $alamat = trim($_POST['adresse']);
 $noHp = trim($_POST['phoneNumber']);
 $tglGabung = trim($_POST['dateOfJoin']);
@@ -13,10 +14,20 @@ if ($nama === '') {
 
 if ($noAnggota === '') {
     $errors[] = "Member ID is required.";
+} 
+
+if ((int)$noAnggota < 0) {
+    $errors[] = "Member ID have to be greater than 0";
 }
 
-if (!empty($error)) {
-    $_SESSION['flash'] = ['type' => 'error', 'pesan' => implode('', $errors)];
+if (!preg_match('/^[0-9-]+$/', $noHp)) {
+    $errors[] = "Phone number can only contain number and '-'";
+}
+
+
+
+if (!empty($errors)) {
+    $_SESSION['flash'] = ['type' => 'error', 'pesan' => implode(', ', $errors)];
     header('Location: tambah.php');
     exit;
 }
@@ -35,11 +46,9 @@ $_SESSION['anggota'][] = [
 ];
 
 $_SESSION['flash'] = [
-    'type'=>'success',
-    'pesan'=>'Anggota berhasil ditambahkan'
+    'type' => 'success',
+    'pesan' => 'Anggota berhasil ditambahkan'
 ];
 
 header('Location: list.php');
 exit;
-?>
-
