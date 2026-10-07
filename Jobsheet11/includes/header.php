@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . '/csrf.php';
-require_once __DIR__ . '/helper.php';
+// require __DIR__ . '/csrf.php';
+// require __DIR__ . '/helper.php';
 
 $__jobsheetRoot = dirname(__DIR__);
 $__scriptDir = dirname($_SERVER['SCRIPT_FILENAME']);
