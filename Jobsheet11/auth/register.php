@@ -9,6 +9,8 @@ if (isset($_SESSION['user_id'])) {
 
 $page_title = "Registrasi Petugas";
 include __DIR__ . '/../includes/header.php';
+require __DIR__ . '/../includes/csrf.php';
+
 
 $flash = $_SESSION['flash'] ?? null;
 unset($_SESSION['flash']);
@@ -21,6 +23,7 @@ unset($_SESSION['flash']);
             <?php endif; ?>
 
             <form method="post" action="proses_register.php">
+                <?php echo csrf_field(); ?>
                 <p>
                     <label for="nama">Nama</label><br>
                     <input type="text" id="nama" name="nama" required>

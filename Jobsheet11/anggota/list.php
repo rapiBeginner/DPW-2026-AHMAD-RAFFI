@@ -2,8 +2,10 @@
 require __DIR__ . '/../includes/auth.php';
 $page_title = "Daftar Anggota";
 include __DIR__ . '/../includes/header.php';
+include __DIR__ . '/../includes/csrf.php';
 include __DIR__ . '/../includes/helper.php';
 require __DIR__ . '/../includes/koneksi.php';
+
 
 $flash = $_SESSION['flash'] ?? null;
 unset($_SESSION['flash']);
@@ -76,6 +78,7 @@ $totalPages = max(1, (int) ceil($totalRows / $perPage));
                                 <a href="edit.php?id=<?php echo $anggota['id']; ?>"><button type="button">Edit</button></a>
                                 <form action="hapus.php" method="post" class="form-hapus">
                                     <input type="hidden" name="id" value="<?php echo $anggota['id']; ?>">
+                                    <?php echo csrf_field(); ?>
                                     <button type="submit" class="btn-hapus">Delete</button>
                                 </form>
                             </td>

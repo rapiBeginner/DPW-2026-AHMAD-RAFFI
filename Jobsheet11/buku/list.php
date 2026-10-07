@@ -1,6 +1,7 @@
 <?php
 $page_title = "Daftar Buku";
 include __DIR__ . '/../includes/header.php';
+include __DIR__ . '/../includes/csrf.php';
 require __DIR__ . '/../includes/koneksi.php';
 require __DIR__ . '/../includes/helper.php';
 
@@ -79,6 +80,7 @@ $totalPages = max(1, (int) ceil($totalRows / $perPage));
 
                                 <form action="hapus.php" method="post" class="form-hapus">
                                     <input type="hidden" name="id" value="<?php echo $buku['id']; ?>">
+                                    <?php echo csrf_field(); ?>
                                     <button type="submit" class="btn-hapus">Delete</button>
                                 </form>
                             </td>

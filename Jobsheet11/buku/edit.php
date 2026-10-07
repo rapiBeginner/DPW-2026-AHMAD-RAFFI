@@ -1,8 +1,9 @@
 <?php
 require __DIR__ . '/../includes/auth.php';
+require __DIR__ . '/../includes/csrf.php';
 $page_title = "Edit Buku";
 include __DIR__ . '/../includes/header.php';
-include __DIR__ . '/../includes/header.php';
+include __DIR__ . '/../includes/helper.php';
 require __DIR__ . '/../includes/koneksi.php';
 
 $flash = $_SESSION['flash'] ?? null;
@@ -27,6 +28,7 @@ if (!$buku) {
 <section>
     <h2>Edit Book</h2>
     <form id="form-edit" method="post" action="proses_edit.php">
+        <?php echo csrf_field(); ?>
         <input type="hidden" name="id" value="<?= $buku['id']; ?>">
         <p>
             <label for="judul">Title</label>

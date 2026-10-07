@@ -6,7 +6,7 @@ if (isset($_SESSION['user_id'])) {
     header('Location: ../index.php');
     exit;
 }
-
+require __DIR__ . '/../includes/csrf.php';
 $page_title = "Login";
 include __DIR__ . '/../includes/header.php';
 
@@ -21,6 +21,7 @@ unset($_SESSION['flash']);
             <?php endif; ?>
 
             <form method="post" action="proses_login.php">
+                 <?php echo csrf_field(); ?>
                 <p>
                     <label for="username">Username</label><br>
                     <input type="text" id="username" name="username" required>

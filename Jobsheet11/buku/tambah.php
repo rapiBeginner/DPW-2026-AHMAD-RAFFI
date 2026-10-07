@@ -1,5 +1,6 @@
 <?php
 require __DIR__ . '/../includes/auth.php';
+require __DIR__ . '/../includes/csrf.php';
 $page_title = "Tambah Buku";
 include __DIR__ . '/../includes/header.php';
 
@@ -14,6 +15,7 @@ unset($_SESSION['flash']);
             <?php endif; ?>
 
             <form id="form-tambah" method="post" action="proses_tambah.php">
+                <?php echo csrf_field() ?>
                 <p>
                     <label for="judul">Title</label>
                     <input type="text" id="judul" name="judul" required>

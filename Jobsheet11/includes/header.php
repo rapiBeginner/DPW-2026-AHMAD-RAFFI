@@ -1,4 +1,7 @@
 <?php
+require_once __DIR__ . '/csrf.php';
+require_once __DIR__ . '/helper.php';
+
 $__jobsheetRoot = dirname(__DIR__);
 $__scriptDir = dirname($_SERVER['SCRIPT_FILENAME']);
 $__rel = ltrim(str_replace('\\', '/', substr($__scriptDir, strlen($__jobsheetRoot))), '/');

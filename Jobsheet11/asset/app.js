@@ -14,7 +14,7 @@ function initNavToggle() {
 function initHapusConfirm() {
     document.addEventListener("submit", function (e) {
         const form = e.target;
-        // if (!form.classList.contains("form-hapus")) return;
+        if (!form.classList.contains("form-hapus")) return;
 
         const row = form.closest("tr");
         const nama = row ? row.querySelector("td")?.textContent : "data ini";
