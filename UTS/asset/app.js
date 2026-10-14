@@ -12,17 +12,17 @@ function initNavToggle() {
 // dirender dinamis via fetch (lihat buku.js/anggota.js) sehingga
 // tombol .btn-hapus belum tentu ada saat DOMContentLoaded.
 function initHapusConfirm() {
-    document.addEventListener("click", function (e) {
-        const btn = e.target.closest(".btn-hapus");
-        if (!btn) return;
+  document.addEventListener("click", function (e) {
+    const btn = e.target.closest(".btn-hapus");
+    if (!btn) return;
 
-        const row = btn.closest("tr");
-        const nama = row ? row.querySelector("td")?.textContent : "data ini";
-        const yakin = confirm("Yakin ingin menghapus \"" + nama + "\"?");
-        if (yakin && row) {
-            row.remove();
-        }
-    });
+    const row = btn.closest("tr");
+    const nama = row ? row.querySelector("td")?.textContent : "data ini";
+    const yakin = confirm('Yakin ingin menghapus "' + nama + '"?');
+    if (yakin && row) {
+      row.remove();
+    }
+  });
 }
 
 function initTableFilter() {
@@ -104,38 +104,42 @@ function initValidasiForm() {
   });
 }
 
-function dashboard(){
-   const daftarPekerja = JSON.parse(
-        localStorage.getItem("daftarPekerja") || "[]"
-    );
+function dashboard() {
+  const daftarPekerja = JSON.parse(
+    localStorage.getItem("daftarPekerja") || "[]",
+  );
 
-    const daftarCustomer = JSON.parse(
-        localStorage.getItem("daftarCustomer") || "[]"
-    );
+  const daftarCustomer = JSON.parse(
+    localStorage.getItem("daftarCustomer") || "[]",
+  );
 
-    const totalPekerja = document.getElementById("total-pekerja");
-    const totalCustomer = document.getElementById("total-customer");
-    const totalBooking = document.getElementById("total-booking");
+  const daftarBooking = JSON.parse(
+    localStorage.getItem("daftarBooking") || "[]",
+  );
 
-    if (totalPekerja) {
-        totalPekerja.textContent = daftarPekerja.length;
-    }
+  const totalPekerja = document.getElementById("total-pekerja");
+  const totalCustomer = document.getElementById("total-customer");
+  const totalBooking = document.getElementById("total-booking");
 
-    if (totalCustomer) {
-        totalCustomer.textContent = daftarCustomer.length;
-    }
+  if (totalPekerja) {
+    totalPekerja.textContent = daftarPekerja.length;
+  }
 
-    if (totalBooking) {
-        totalBooking.textContent = JSON.parse(
-            localStorage.getItem("daftarBooking") || "[]"
-        ).length;
-    }
+  if (totalCustomer) {
+    totalCustomer.textContent = daftarCustomer.length;
+  }
+
+  if (totalBooking) {
+    totalBooking.textContent = JSON.parse(
+      localStorage.getItem("daftarBooking") || "[]",
+    ).length;
+  }
 }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    initNavToggle();
-    initHapusConfirm();
-    initTableFilter();
-    initValidasiForm();
-    dashboard();
+document.addEventListener("DOMContentLoaded", function () {
+  initNavToggle();
+  initHapusConfirm();
+  initTableFilter();
+  initValidasiForm();
+  dashboard();
 });
