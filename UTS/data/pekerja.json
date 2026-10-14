@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "nama": "Alya Putri",
+        "jenis_kelamin": "Perempuan",
+        "no_hp": "081234567801",
+        "jabatan": "Hair Stylist",
+        "keahlian": "Hair Styling, Hair Coloring",
+        "status": "Aktif"
+    },
+    {
+        "id": 2,
+        "nama": "Nadia Safitri",
+        "jenis_kelamin": "Perempuan",
+        "no_hp": "081234567802",
+        "jabatan": "Beautician",
+        "keahlian": "Facial, Skincare",
+        "status": "Aktif"
+    },
+    {
+        "id": 3,
+        "nama": "Rizky Pratama",
+        "jenis_kelamin": "Laki-laki",
+        "no_hp": "081234567803",
+        "jabatan": "Hair Stylist",
+        "keahlian": "Hair Cut, Hair Treatment",
+        "status": "Aktif"
+    },
+    {
+        "id": 4,
+        "nama": "Salsa Maharani",
+        "jenis_kelamin": "Perempuan",
+        "no_hp": "081234567804",
+        "jabatan": "Nail Artist",
+        "keahlian": "Manicure, Nail Art",
+        "status": "Tidak Aktif"
+    },
+    {
+        "id": 5,
+        "nama": "Dinda Permata",
+        "jenis_kelamin": "Perempuan",
+        "no_hp": "081234567805",
+        "jabatan": "Terapis",
+        "keahlian": "Massage, Body Treatment",
+        "status": "Aktif"
+    }
+]

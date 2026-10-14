@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belle Salon | Booking List</title>
+    <link rel="stylesheet" href="../asset/style.css">
+</head>
+<body>
+    <header>
+        <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">
+            &#9776;
+        </button>
+        <h1>Belle Salon</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pekerja/list.html">Employee List</a></li>
+                <li><a href="../pekerja/tambah.html">Add Employee</a></li>
+                <li><a href="../customer/list.html">Customer List</a></li>
+                <li><a href="../customer/tambah.html">Add Customer</a></li>
+                <li><a href="list.html">Booking List</a></li>
+                <li><a href="tambah.html">Add Booking</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Booking List</h2>
+            <p>Manage customer appointments at Belle Salon.</p>
+
+            <p>
+                <a href="tambah.html" class="btn-booking">Add Booking</a>
+            </p>
+
+            <div class="search-box">
+                <label for="search-input">Search Booking</label>
+                <input
+                    type="search"
+                    id="search-input"
+                    placeholder="Search customer, employee, or service..."
+                >
+            </div>
+            
+
+            <p id="loading-indicator">Loading booking data...</p>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Customer</th>
+                            <th>Employee</th>
+                            <th>Service</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Price</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="daftar-booking"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Belle Salon &mdash; Salon Management System</p>
+    </footer>
+
+    <script src="../asset/app.js"></script>
+    <script src="../asset/booking.js"></script>
+</body>
+</html>

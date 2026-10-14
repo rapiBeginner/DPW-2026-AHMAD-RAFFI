@@ -1,0 +1,33 @@
+
+[
+    {
+        "id": 1,
+        "nama_customer": "Anindya Putri",
+        "nama_pekerja": "Alya Putri",
+        "layanan": "Hair Coloring",
+        "tanggal": "2026-10-20",
+        "jam": "10:00",
+        "harga": 150000,
+        "status": "Dikonfirmasi"
+    },
+    {
+        "id": 2,
+        "nama_customer": "Dewi Anggraini",
+        "nama_pekerja": "Nadia Safitri",
+        "layanan": "Facial",
+        "tanggal": "2026-10-21",
+        "jam": "13:00",
+        "harga": 100000,
+        "status": "Menunggu"
+    },
+    {
+        "id": 3,
+        "nama_customer": "Maya Lestari",
+        "nama_pekerja": "Rizky Pratama",
+        "layanan": "Hair Cut",
+        "tanggal": "2026-10-22",
+        "jam": "15:00",
+        "harga": 50000,
+        "status": "Selesai"
+    }
+]

@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "nama": "Anindya Putri",
+        "jenis_kelamin": "Perempuan",
+        "no_hp": "082345678901",
+        "email": "anindya@example.com",
+        "alamat": "Malang",
+        "tanggal_daftar": "2026-10-01"
+    },
+    {
+        "id": 2,
+        "nama": "Dewi Anggraini",
+        "jenis_kelamin": "Perempuan",
+        "no_hp": "082345678902",
+        "email": "dewi@example.com",
+        "alamat": "Batu",
+        "tanggal_daftar": "2026-10-03"
+    },
+    {
+        "id": 3,
+        "nama": "Maya Lestari",
+        "jenis_kelamin": "Perempuan",
+        "no_hp": "082345678903",
+        "email": "maya@example.com",
+        "alamat": "Kepanjen",
+        "tanggal_daftar": "2026-10-05"
+    },
+    {
+        "id": 4,
+        "nama": "Putri Amelia",
+        "jenis_kelamin": "Perempuan",
+        "no_hp": "082345678904",
+        "email": "putri@example.com",
+        "alamat": "Malang",
+        "tanggal_daftar": "2026-10-10"
+    },
+    {
+        "id": 5,
+        "nama": "Nabila Zahra",
+        "jenis_kelamin": "Perempuan",
+        "no_hp": "082345678905",
+        "email": "nabila@example.com",
+        "alamat": "Singosari",
+        "tanggal_daftar": "2026-10-12"
+    }
+]

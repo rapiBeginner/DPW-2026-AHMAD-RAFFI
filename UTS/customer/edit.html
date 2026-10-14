@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belle Salon | Edit Customer</title>
+    <link rel="stylesheet" href="../asset/style.css">
+</head>
+
+<body>
+    <header>
+        <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">
+            &#9776;
+        </button>
+        <h1>Belle Salon</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pekerja/list.html">Employee List</a></li>
+                <li><a href="../pekerja/tambah.html">Add Employee</a></li>
+                <li><a href="list.html">Customer List</a></li>
+                <li><a href="tambah.html">Add Customer</a></li>
+                <li><a href="../booking/list.html">Booking List</a></li>
+                <li><a href="../booking/tambah.html">Add Booking</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Edit Customer</h2>
+            <p>Update the customer information below.</p>
+
+            <form id="form-edit">
+                <p>
+                    <label for="nama">Full Name</label>
+                    <input type="text" id="nama" name="nama" required>
+                </p>
+
+                <p>
+                    <label for="jenis_kelamin">Gender</label>
+                    <select id="jenis_kelamin" name="jenis_kelamin" required>
+                        <option value="">Select gender</option>
+                        <option value="Perempuan">Female</option>
+                        <option value="Laki-laki">Male</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="no_hp">Phone Number</label>
+                    <input type="tel" id="no_hp" name="no_hp" placeholder="08xxxxxxxxxx" required>
+                </p>
+
+                <p>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="alamat">Address</label>
+                    <textarea id="alamat" name="alamat" rows="3" required></textarea>
+                </p>
+
+                <p>
+                    <button type="submit">Update Customer</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Belle Salon &mdash; Salon Management System</p>
+    </footer>
+
+    <script src="../asset/app.js"></script>
+    <script src="../asset/customer.js"></script>
+</body>
+
+</html>

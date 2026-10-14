@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belle Salon | Edit Booking</title>
+    <link rel="stylesheet" href="../asset/style.css">
+</head>
+<body>
+    <header>
+        <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">
+            &#9776;
+        </button>
+        <h1>Belle Salon</h1>
+        <nav>
+            <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pekerja/list.html">Employee List</a></li>
+            <li><a href="../pekerja/tambah.html">Add Employee</a></li>
+            <li><a href="../customer/list.html">Customer List</a></li>
+            <li><a href="../customer/tambah.html">Add Customer</a></li>
+            <li><a href="list.html">Booking List</a></li>
+            <li><a href="tambah.html">Add Booking</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Edit Booking</h2>
+            <p>Update the booking information below.</p>
+
+            <form id="form-edit">
+                <p>
+                    <label for="nama_customer">Customer</label>
+                    <select id="nama_customer" name="nama_customer" required>
+                        <option value="">Select customer</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="nama_pekerja">Employee</label>
+                    <select id="nama_pekerja" name="nama_pekerja" required>
+                        <option value="">Select employee</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="layanan">Service</label>
+                    <select id="layanan" name="layanan" required>
+                        <option value="">Select service</option>
+                        <option value="Hair Cut">Hair Cut</option>
+                        <option value="Hair Coloring">Hair Coloring</option>
+                        <option value="Hair Treatment">Hair Treatment</option>
+                        <option value="Facial">Facial</option>
+                        <option value="Skincare">Skincare</option>
+                        <option value="Manicure">Manicure</option>
+                        <option value="Nail Art">Nail Art</option>
+                        <option value="Massage">Massage</option>
+                        <option value="Body Treatment">Body Treatment</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="tanggal">Booking Date</label>
+                    <input type="date" id="tanggal" name="tanggal" required>
+                </p>
+
+                <p>
+                    <label for="jam">Booking Time</label>
+                    <input type="time" id="jam" name="jam" required>
+                </p>
+
+                <p>
+                    <label for="harga">Price (Rp)</label>
+                    <input type="number" id="harga" name="harga" min="0" required>
+                </p>
+
+                <p>
+                    <label for="status">Status</label>
+                    <select id="status" name="status" required>
+                        <option value="Menunggu">Waiting</option>
+                        <option value="Dikonfirmasi">Confirmed</option>
+                        <option value="Selesai">Completed</option>
+                    </select>
+                </p>
+
+                <p>
+                    <button type="submit">Update Booking</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Belle Salon &mdash; Salon Management System</p>
+    </footer>
+
+    <script src="../asset/app.js"></script>
+    <script src="../asset/booking.js"></script>
+</body>
+</html>
