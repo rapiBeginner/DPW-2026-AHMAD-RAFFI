@@ -11,34 +11,7 @@ function initNavToggle() {
 // Memakai event delegation di document karena baris tabel sekarang
 // dirender dinamis via fetch (lihat buku.js/anggota.js) sehingga
 // tombol .btn-hapus belum tentu ada saat DOMContentLoaded.
-function initHapusConfirm() {
-  document.addEventListener("click", function (e) {
-    const btn = e.target.closest(".btn-hapus");
-    if (!btn) return;
 
-    const row = btn.closest("tr");
-    const nama = row ? row.querySelector("td")?.textContent : "data ini";
-    const yakin = confirm('Yakin ingin menghapus "' + nama + '"?');
-    if (yakin && row) {
-      row.remove();
-    }
-  });
-}
-
-function initTableFilter() {
-  const input = document.getElementById("search-input");
-  const table = document.querySelector(".table-responsive table");
-  if (!input || !table) return;
-
-  input.addEventListener("keyup", function () {
-    const keyword = input.value.toLowerCase();
-    const rows = table.querySelectorAll("tbody tr");
-    rows.forEach(function (row) {
-      const teks = row.textContent.toLowerCase();
-      row.style.display = teks.includes(keyword) ? "" : "none";
-    });
-  });
-}
 
 function tampilkanError(input, pesan) {
   hapusError(input);
@@ -120,6 +93,7 @@ function dashboard() {
   const totalPekerja = document.getElementById("total-pekerja");
   const totalCustomer = document.getElementById("total-customer");
   const totalBooking = document.getElementById("total-booking");
+  console.log(localStorage.getItem("daftarBooking"));
 
   if (totalPekerja) {
     totalPekerja.textContent = daftarPekerja.length;
@@ -138,8 +112,6 @@ function dashboard() {
 
 document.addEventListener("DOMContentLoaded", function () {
   initNavToggle();
-  initHapusConfirm();
-  initTableFilter();
   initValidasiForm();
   dashboard();
 });
