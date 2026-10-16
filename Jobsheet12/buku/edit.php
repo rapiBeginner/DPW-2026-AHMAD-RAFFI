@@ -1,9 +1,9 @@
 <?php
 require __DIR__ . '/../includes/auth.php';
-require __DIR__ . '/../includes/csrf.php';
+// require __DIR__ . '/../includes/csrf.php';
 $page_title = "Edit Buku";
 include __DIR__ . '/../includes/header.php';
-include __DIR__ . '/../includes/helper.php';
+// include __DIR__ . '/../includes/helper.php';
 require __DIR__ . '/../includes/koneksi.php';
 
 $flash = $_SESSION['flash'] ?? null;

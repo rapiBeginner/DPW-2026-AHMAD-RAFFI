@@ -11,7 +11,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 $sudahLogin = isset($_SESSION['user_id']);
-
+var_dump($_SESSION['csrf_token']);
 ?>
 
 <!DOCTYPE html>
