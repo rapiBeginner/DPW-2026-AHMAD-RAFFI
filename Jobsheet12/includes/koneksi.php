@@ -5,7 +5,7 @@ $port = getenv('DB_PORT') ?: '5432';
 $dbname = getenv('DB_NAME') ?: 'postgres';
 $username = getenv('DB_USER');
 $password = getenv('DB_PASSWORD');
-
+  
 try {
     $pdo = new PDO(
         "pgsql:host=$host;port=$port;dbname=$dbname;sslmode=require",
