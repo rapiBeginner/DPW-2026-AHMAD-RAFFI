@@ -9,6 +9,8 @@ RUN for file in /etc/apache2/mods-enabled/mpm_*.load; do \
     done; \
     a2enmod mpm_prefork rewrite
 
+RUN apache2ctl -M
+
 COPY . /var/www/html/
 
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
