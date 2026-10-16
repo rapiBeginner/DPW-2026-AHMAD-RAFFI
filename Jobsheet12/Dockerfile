@@ -11,4 +11,8 @@ COPY . /var/www/html/
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
     && apache2ctl -t
 
+RUN echo "=== MPM CONFIGURATION ===" \
+    && ls -la /etc/apache2/mods-enabled/mpm_*.load \
+    && grep -R "LoadModule mpm_" /etc/apache2/
+
 EXPOSE 80
