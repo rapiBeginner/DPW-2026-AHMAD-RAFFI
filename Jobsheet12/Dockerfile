@@ -1,5 +1,7 @@
 FROM php:8.2-apache
 
+RUN ls -l /etc/apache2/mods-enabled/mpm_*
+
 RUN apt-get update && apt-get install -y libpq-dev \
     && docker-php-ext-install pdo_pgsql \
     && rm -rf /var/lib/apt/lists/*
